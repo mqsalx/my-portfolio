@@ -1,0 +1,18 @@
+.navbar {
+    display: flex;
+    justify-content: space-around; /* Espaçamento entre os links */
+    align-items: center;
+    width: 100%; /* A navbar ocupa toda a largura dentro do Header */
+    background-color: blue;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+.navbar a:hover {
+    color: #f0f0f0;
+}

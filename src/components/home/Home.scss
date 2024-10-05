@@ -1,0 +1,26 @@
+.home-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.about-me {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,14 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Inclua a altura desejada para o Footer */
+    background-color: black; /* Cor de fundo */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Garante que o footer fique acima de outros conteúdos */
+    padding: 0 20px; /* Espaçamento nas laterais */
+}

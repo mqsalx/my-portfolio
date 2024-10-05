@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+}
+
+.loader {
+    width: fit-content;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 30px;
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    /* Impede que o texto seja selecionado */
+}
+
+.loader .loading-text .letter {
+    display: inline-block;
+    opacity: 0;
+    animation: letter-fade-in 4s ease forwards, neon-pulse 1.5s ease-in-out infinite;
+    color: white;
+    text-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 8px #fff,
+        0 0 12px #fff,
+        0 0 16px #fff,
+        0 0 20px #fff;
+    /* Transições suaves para hover */
+}
+
+/* Animação de fade-in das letras */
+@keyframes letter-fade-in {
+    0% {
+        opacity: 0;
+        text-shadow: none;
+        /* Sem brilho no início */
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow:
+            0 0 3px #fff,
+            0 0 6px #fff,
+            0 0 10px #fff,
+            0 0 12px #fff;
+        /* Luz final mais suave */
+    }
+}
+
+/* Animação de pulsação do neon */
+@keyframes neon-pulse {
+    0% {
+        text-shadow:
+            0 0 30px #fff,
+            0 0 40px #fff,
+            0 0 50px #fff,
+            0 0 60px #fff;
+        /* Brilho neon máximo */
+    }
+
+    50% {
+        text-shadow:
+            0 0 2px #fff,
+            0 0 5px #fff,
+            0 0 6px #fff,
+            0 0 10px #fff;
+
+        /* Brilho reduzido */
+    }
+
+    100% {
+        text-shadow:
+            0 0 30px #fff,
+            0 0 40px #fff,
+            0 0 50px #fff,
+            0 0 60px #fff;
+        /* Brilho neon máximo novamente */
+    }
+}

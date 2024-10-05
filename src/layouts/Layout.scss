@@ -1,0 +1,60 @@
+// Estilos gerais do layout
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+    background-color: black;
+}
+
+:root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
+}
+
+html {
+    font-family: system-ui, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.hidden {
+    display: none;
+}
+
+main {
+    display: flex;
+    flex-direction: row; // Organiza as seções horizontalmente
+    overflow-x: scroll; // Permite scroll horizontal
+    scroll-snap-type: x mandatory; // Faz o scroll "grudar" nas seções
+    width: 100vw;
+    height: 100vh;
+
+    &::-webkit-scrollbar {
+        display: none; // Oculta a barra de rolagem
+    }
+}
+
+// Estilos para cada seção
+section {
+    min-width: 100vw; // Cada seção ocupa 100% da largura da viewport
+    min-height: 100vh; // Cada seção ocupa 100% da altura da viewport
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start; // Seções vão "grudar" ao scroll
+}
+
+// Estilos opcionais para personalização
+.section-title {
+    font-size: 2.5rem;
+    color: #333;
+}

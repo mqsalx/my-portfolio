@@ -1,0 +1,28 @@
+---
+import Footer from "../components/footer/Footer.astro"
+import Header from "../components/header/Header.astro"
+import Home from "../components/home/Home.astro"
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Portfolio">
+  <Header />
+
+  <!-- Seções organizadas horizontalmente pelo layout -->
+  <Home />
+
+  <!-- <section id="about">
+    <About />
+  </section> -->
+
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener("scroll", function () {
+    const scrollContainer = document.querySelector("main")
+    if (scrollContainer) {
+      scrollContainer.scrollLeft = window.scrollY
+    }
+  })
+</script>
